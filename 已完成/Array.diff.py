@@ -14,7 +14,6 @@ class TestCases(unittest.TestCase):
     def test3(self):self.assertEqual(array_diff([1,2,2], [2]), [1], "a was [1,2,2], b was [2], expected [1]")
     def test4(self):self.assertEqual(array_diff([1,2,2], []), [1,2,2], "a was [1,2,2], b was [], expected [1,2,2]")
     def test5(self):self.assertEqual(array_diff([], [1,2]), [], "a was [], b was [1,2], expected []")
-    # def test6(self):self.assertEqual(find_nb(1), 1)
 
 def array_diff(a, b):
     return [i for i in a if (i not in b)]

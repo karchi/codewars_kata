@@ -13,9 +13,6 @@ class TestCases(unittest.TestCase):
     def test1(self):self.assertEqual(duplicate_count("abcde"), 0)
     def test2(self):self.assertEqual(duplicate_count("abcdea"), 1)
     def test3(self):self.assertEqual(duplicate_count("indivisibility"), 1)
-    # def test4(self):self.assertEqual(ipv4_address("255.255.255.255"), True)
-    # def test5(self):self.assertEqual(ipv4_address("10.256.30.40"), False)
-
 
 def duplicate_count(text):
     text = text.lower()
@@ -26,6 +23,7 @@ def duplicate_count(text):
             result +=1
     return result
 
+    
 '''
 # 另一种写法：
 def duplicate_count(text):

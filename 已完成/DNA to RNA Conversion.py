@@ -12,8 +12,7 @@ class TestCases(unittest.TestCase):
     def test1(self):self.assertEqual(DNAtoRNA("TTTT"), "UUUU")
     def test2(self):self.assertEqual(DNAtoRNA("GCAT"), "GCAU")
     def test3(self):self.assertEqual(DNAtoRNA("GACCGCCGCC"), "GACCGCCGCC")
-    # def test4(self):self.assertEqual(find_even_index(range(1,100)),-1)
-    # def test5(self):self.assertEqual(find_even_index([0,0,0,0,0]),0)
+
 
 def DNAtoRNA(dna):
     return dna.replace("T","U")

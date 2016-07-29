@@ -17,7 +17,6 @@ class TestCases(unittest.TestCase):
 "Must work with two names")
     def test4(self):self.assertEqual(namelist([{'name': 'Bart'}]), 'Bart', "Wrong output for a single name")
     def test5(self):self.assertEqual(namelist([]), '', "Must work with no names")
-    # def test6(self):self.assertEqual(lowercase_count("abcdefghijklmnopqrstuvwxyz"), 26)
 
 def namelist(names):
     result = ""
