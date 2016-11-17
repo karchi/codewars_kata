@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 
 '''
-# 题目地址：
+# Sum of Pairs题目地址：
 https://www.codewars.com/kata/sum-of-pairs
 '''
 
@@ -35,6 +35,7 @@ def sum_pairs(ints, s):
 '''
 
 
+'''
 #太慢了
 def sum_pairs(ints, s):
     result = None
@@ -46,7 +47,7 @@ def sum_pairs(ints, s):
             result = [s - number, number]
             break
     return result
-
+'''
 
 '''
 #太慢了
@@ -74,6 +75,13 @@ def sum_pairs(ints, s):
     return result
 '''
 
+def sum_pairs(ints, s):
+    otherInts = [s - i for i in ints]
+    result = None
+    for i in range(len(ints)):
+    
+    return result
+    
 if __name__ == '__main__':
     unittest.main()
     # print(sum_pairs([10, 5, 2, 3, 7, 5], 10))
