@@ -7,6 +7,7 @@ https://www.codewars.com/kata/sum-of-pairs
 '''
 
 import time
+# import random
 import unittest
         
 class TestCases(unittest.TestCase):
@@ -75,26 +76,45 @@ def sum_pairs(ints, s):
     return result
 '''
 
+'''    
 def sum_pairs(ints, s):
     otherInts = [s - i for i in ints]
     result = None
-    for i in range(len(ints)):
-    
+    i = 0
+    end = len(ints)
+    while i < end:
+        for j in range(i+1,end):
+            if ints[i] == otherInts[j]:
+                end = j
+                result = [ints[i], ints[j]]
+                break
+        i += 1
     return result
+'''
+
+def sum_pairs(ints, s):
+    otherInts = [s - i for i in ints]
+    end = 1
+    while end < len(ints):
+        for i in range(end):
+            if ints[i] == otherInts[end]:
+                return [ints[i], ints[end]]
+        end += 1
+    return None
     
 if __name__ == '__main__':
     unittest.main()
-    # print(sum_pairs([10, 5, 2, 3, 7, 5], 10))
+    # print([i for i in range(10,1,-1)])
     # for i in range(10,1,-1):
         # print(i)
     
     # 测试时间：
     # start = time.clock()
-    # for i in range(100000):
+    # for i in range(10000):
         # a = sum_pairs([20, -13, 40], -7)
         # b = sum_pairs([20, -13, 40, 23, 122, 492, 324, -245, 58, -132, -49, 942], -7)
     # end = time.clock()
-    # print(end - start)
+    # print(end - start) #1.15_1.09
 
     
 
